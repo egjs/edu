@@ -1,0 +1,22 @@
+{
+  "name": "04.visible_infiniteGrid",
+  "authors": [
+    "sculove <sculove.pe.kr@navercorp.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "egjs": "^1.1.0",
+    "underscore": "^1.8.3"
+  }
+}
