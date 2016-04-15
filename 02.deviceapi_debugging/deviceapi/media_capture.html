@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <title>Device Orientation Sample</title>
+    <link rel="stylesheet" href="./css/common.css"/>
+</head>
+<body>
+
+<div class="container">
+    <h3 class="text-center">Media Capture and Streams</h3>
+
+    <input type="file" accept="video/*;capture=camcorder">
+
+    <video id="camera-stream" style="width:100%; height:400px;"></video>
+
+
+    <script type="text/javascript">
+        navigator.getUserMedia  = navigator.getUserMedia ||
+        navigator.webkitGetUserMedia ||
+        navigator.mozGetUserMedia ||
+        navigator.msGetUserMedia;
+
+        var video = document.querySelector('video');
+
+        if (navigator.getUserMedia) {
+            navigator.getUserMedia({audio: true, video: true}, function(stream) {
+                video.src = window.URL.createObjectURL(stream);
+            }, function() {});
+        } else {
+            video.src = 'somevideo.webm'; // fallback.
+        }
+    </script>
+</div>
+</body>
+</html>
