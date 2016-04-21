@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+<title>egjs - 실습</title>
+
+<!-- user css start -->
+<style type="text/css">
+	body {
+		font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	}
+
+	html,
+	body,
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		list-style: none;
+	}
+
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+
+	section {
+		margin: 15px 0;
+	}
+
+	.row {
+		-webkit-user-select: none;
+		background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAQAAADYv8WvAAAAEElEQVR4AWP4D4QMDGoMagAQkgJLtGgMhgAAAABJRU5ErkJggg==) repeat-x bottom;
+		background-size: 1px 1px;
+		font-size: 13px;
+		margin-top: -1px;
+		height:30px;
+	}
+
+	.row > h3 {
+		position: absolute;
+		top: 10px;
+		width: 100%;
+		text-align: left;
+		font-size: 13px;
+		padding-left: 23px;
+		box-sizing: border-box;
+		color: #777;
+	}
+
+	.row > p {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		margin-left: 23px;
+		min-height: 17px;
+		font-size: 13px;
+		color: #777;
+	}
+
+	button {
+		display: block;
+		width: 100%;
+		height: 40px;
+		margin: 0 auto;
+		background-color: rgba(232, 232, 232, 0.26);
+		border: 1px solid rgba(232, 232, 232, 0.76);
+		color: #777;
+		font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		font-size: 17px;
+	}
+
+	button:focus {
+		outline: 0;
+	}
+
+	.r_more_load {
+		text-align: center;
+	}
+
+	/* 이 부분은 로그를 위한 영역입니다. */
+
+	#debug {
+		height: 40px;
+		width: 100%;
+		background-color: rgba(255, 255, 255, .6);
+		text-align: center;
+	}
+	/* 하이라이트 방지를 위한 CSS */
+
+	.NO_TAP_HIGHLIGHT {
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	}
+
+	.NO_TAP_HIGHLIGHT * {
+		-webkit-tap-highlight-color: rgba(0, 0, 0, .25);
+	}
+</style>
+
+<!-- user css end -->
+<script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+<script src=".js/eg.persist.min.js"></script>
+</head>
+<body>
+<section id="newsLoader">
+	<ul class="listContainer">
+		<li class="row">
+			<p><a href="http://me2.do/FF0C3V8H">'수요' 못 읽은 현대차… 판매량 줄며 매출·영업익 감소(종합)</a></p>
+			<p></p>
+		</li>
+		<li class="row">
+			<p><a href="http://me2.do/FF0C3V8H">中 최대전자상가 가보니 "갤S6 없어 못판다"</a></p>
+			<p></p>
+		</li>
+		<li class="row">
+			<p><a href="http://me2.do/FF0C3V8H">단말기 지원금 대신 요금할인 20%, 내일부터 적용</a></p>
+			<p></p>
+		</li>
+		<li class="row">
+			<p><a href="http://me2.do/FF0C3V8H">글로벌 '환율전쟁' 희생양 된 현대차</a></p>
+			<p></p>
+		</li>
+		<li class="row">
+			<p><a href="http://me2.do/FF0C3V8H">아이폰7에 대하여 알아야 할 10가지</a></p>
+			<p></p>
+		</li>
+		<li class="row">
+			<p><a href="http://me2.do/FF0C3V8H">'수요' 못 읽은 현대차… 판매량 줄며 매출·영업익 감소(종합)</a></p>
+			<p></p>
+		</li>
+		<li class="row">
+			<p><a href="http://me2.do/FF0C3V8H">中 최대전자상가 가보니 "갤S6 없어 못판다"</a></p>
+			<p></p>
+		</li>
+		<li class="row">
+			<p><a href="http://me2.do/FF0C3V8H">단말기 지원금 대신 요금할인 20%, 내일부터 적용</a></p>
+			<p></p>
+		</li>
+		<li class="row">
+			<p><a href="http://me2.do/FF0C3V8H">글로벌 '환율전쟁' 희생양 된 현대차</a></p>
+			<p></p>
+		</li>
+		<li class="row">
+			<p><a href="http://me2.do/FF0C3V8H">아이폰7에 대하여 알아야 할 10가지</a></p>
+			<p></p>
+		</li>
+		<li class="row">
+			<p><a href="http://me2.do/FF0C3V8H">단말기 지원금 대신 요금할인 20%, 내일부터 적용</a></p>
+			<p></p>
+		</li>
+		<li class="row">
+			<p><a href="http://me2.do/FF0C3V8H">글로벌 '환율전쟁' 희생양 된 현대차</a></p>
+			<p></p>
+		</li>
+		<li class="row">
+			<p><a href="http://me2.do/FF0C3V8H">아이폰7에 대하여 알아야 할 10가지</a></p>
+			<p></p>
+		</li>
+		<li class="row">
+			<p><a href="http://me2.do/FF0C3V8H">글로벌 '환율전쟁' 희생양 된 현대차</a></p>
+			<p></p>
+		</li>
+		<li class="row">
+			<p><a href="http://me2.do/FF0C3V8H">아이폰7에 대하여 알아야 할 10가지</a></p>
+			<p></p>
+		</li>
+		<li class="row">
+			<p><a href="http://me2.do/FF0C3V8H">단말기 지원금 대신 요금할인 20%, 내일부터 적용</a></p>
+			<p></p>
+		</li>
+		<li class="row">
+			<p><a href="http://me2.do/FF0C3V8H">글로벌 '환율전쟁' 희생양 된 현대차</a></p>
+			<p></p>
+		</li>
+		<li class="row">
+			<p><a href="http://me2.do/FF0C3V8H">아이폰7에 대하여 알아야 할 10가지</a></p>
+			<p></p>
+		</li>
+	</ul>
+	<div class="r_more r_more_load" id="moreLoad" style="display:block;">
+
+		<!---- 주의 : 로딩 애니메이션 gif는 출력되는 동안 cpu를 사용하므로, 필요한 시점에만 노출하고 불필요할땐 항상 숨김처리 한다. ---->
+		<span id="loading" style="display:none"><img src="http://static.news.naver.net/image/news/m/2014/03/loading.gif" alt="로딩중" width="26" height="26"></span>
+		<span id="complete" style="display:none">완료</span>
+	</div>
+</section>
+<script>
+
+	/****************************************
+
+	 + Persist 기본 처리 :
+
+	 1. 페이지의 이동 발생 영역 (ex. anchor 클릭으로 이동하는 경우)
+
+	 if(page > 1) {  // 기본 페이지에서 이동인 경우라면, persist 사용 불필요 하다.
+
+		// 1페이지를 제외하고 동적으로 추가된 데이터만 대상으로 Persit에 저장될 데이터 추출한다.
+		var data = " ... ";
+
+		$.persist({
+			key: data,
+			scrollTop: document.body.scrollTop  // 현재 사용자 스크롤 위치 값
+		});
+	}
+
+	 2. 페이지 복귀시 수행
+
+	 $(window).on("persist", function(e) {
+		var state = e.state;
+
+		if(state) {
+			element.append(state.key);  // 동적으로 추가된 컨텐츠만 append 한다.
+			window.scrollTo(0, state.scrollTop);  // 이동전 스크롤 위치를 복원
+		}
+	});
+
+	 ****************************************/
+
+	var newsData = [
+		"김무성 \"文 특검 주장 환영…별도 특검법은 정치적 의도\"",
+		"현대차 1분기 영업이익 1조5천880억…4년여만에 최저치",
+		"軍 혹한기 훈련에 군의관 집단불참···기강 해이 논란",
+		"[뉴스줌인] 구글의 '프로젝트 파이', 왜 MVNO 진출일까?",
+		"중국 車업계 자체 기술로 전기차 개발…'고급·저가'로 승부",
+		"'수요' 못 읽은 현대차… 판매량 줄며 매출·영업익 감소(종합)",
+		"中 최대전자상가 가보니 \"갤S6 없어 못판다\"",
+		"단말기 지원금 대신 요금할인 20%, 내일부터 적용",
+		"글로벌 \'환율전쟁\' 희생양 된 현대차",
+		"아이폰7에 대하여 알아야 할 10가지",
+	];
+
+	var newsAddUnit = 10;
+
+	var $baseEl = $("#newsLoader");
+	var $ListContainer = $(".listContainer", $baseEl);
+
+	// 최초 보여지는 컨텐츠는 persit에 저장할 필요가 없기 때문에, persist 대상 데이터 분리를 위해 컨텐츠 길이를 기억한다.
+	var initContentLen = $ListContainer.find("li").length;
+
+	function appendNews() {
+		var newsHtml = "";
+
+		for (var i = 0; i < newsAddUnit; i++) {
+			var randomNews = newsData[Math.floor(Math.random() * 10)];
+			newsHtml += "<li class='row'><p><a href='http://me2.do/FF0C3V8H'>" + randomNews + "</a><p></li>";
+		}
+		$ListContainer.append($(newsHtml));
+
+		// 로딩 애니메이션 gif는 출력되는 동안 cpu를 사용하므로, 필요한 시점에만 노출하고 불필요할땐 항상 숨김처리 한다.
+		$("#loading").hide();
+	}
+
+	// 스크롤이 끝났을 때 스크롤된 위치가 화면 아래 끝까지 도달했다면 더 많은 코멘트 보여주기
+	var moreLoadLimit = 10;
+	var moreLoadCnt = 0;
+
+	$(window).on("scrollend", function() {
+		if (getDocHeight() - window.pageYOffset < window.innerHeight + 100) {
+			$("#loading").show();
+			moreLoadCnt++;
+
+			setTimeout(function() {
+				if (moreLoadCnt < moreLoadLimit) {
+					appendNews();
+				} else {
+					$(window).off("scrollend");
+					$("#loading").hide();
+					$("#complete").show();
+				}
+			}, 500);
+		}
+	});
+
+	$(window).on("persist", function(e) {
+		// @todo 서비스 개발자 : persist메소드를 통해 저장한 데이터 꺼내서 화면 복원하기
+		var state = e.state;
+
+		// Persist 데이터가 존재하는 경우에만 업데이트 수행
+		if(state && state.news) {
+			$ListContainer.append(state.news);  // Persist 데이터를 목록에 append
+			window.scrollTo(0, state.scrollTop);  // 이전 위치로 이동
+			moreLoadCnt = state.moreLoadCnt;  // 더보기 카운트
+
+			moreLoadLimit = moreLoadLimit - ($("li", $ListContainer).length - 18) / 10;
+
+			log("Persist 데이터 :", state);
+		}
+	});
+
+	// delegate 사용시, delegate영역이 클릭시 하이라이트 되는 이슈 대응 코드
+	$ListContainer.addClass("NO_TAP_HIGHLIGHT");
+
+	// 페이지 이동이 되는 대상의 부모를 delegate으로 지정
+	$ListContainer.on("click", "a", function(e) {
+		var data = "", list;
+
+		// 최초 1페이지는 기본 데이터 구성이므로, persist에 데이터를 저장할 필요 없다.
+		if(moreLoadCnt > 0) {
+			list = $ListContainer.find("li");
+
+			// 1페이지를 제외하고 동적으로 추가된 데이터만 대상으로 Persit에 저장될 데이터 추출한다.
+			for(var i=initContentLen, el; el = list[i]; i++) {
+				data += el.outerHTML;
+			}
+
+			/*
+			 * @todo 서비스 개발자 : persist 메서드를 통해 화면 복원에 필요한 데이터를 저장한다.
+			 * 복원에 필요한 정보 scroll 위치, javascript 객체, HTML String 등을 저장한다.
+			 */
+			$.persist({
+				news: data,
+				scrollTop: document.body.scrollTop,
+				moreLoadCnt: moreLoadCnt
+			});
+		}
+	});
+
+	function getDocHeight() {
+		var D = document;
+		return Math.max(
+				D.body.scrollHeight, D.documentElement.scrollHeight,
+				D.body.offsetHeight, D.documentElement.offsetHeight,
+				D.body.clientHeight, D.documentElement.clientHeight
+		);
+	}
+</script>
+</body>
+</html>

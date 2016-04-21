@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+<title>egjs - 실습</title>
+
+<!-- user css start -->
+<style type="text/css">
+	h1{font-size:20px}
+	.flick{height:100px;background-color:grey}
+	.eg-flick-container > div {height:100%;float:left;display:block}
+	.eg-flick-panel p {text-align:center;font-size:2.0em}
+	.eg-flick-panel p img {vertical-align:middle}
+
+	#log{
+		height: 300px;
+		overflow-y: scroll;
+		background-color: #eee;
+		margin-bottom: 10px;
+		padding-left: 10px;
+	}
+</style>
+
+<!-- user css end -->
+<script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.4/hammer.min.js"></script>
+<script src="./js/eg.flicking.min.js"></script>
+</head>
+<body>
+
+	<h1>Custom event</h1>
+
+	<!-- 플리킹 요소 -->
+	<div id="wrapper" class="flick">
+		<div style="background-color:#CC66CC">
+			<p>panel 0</p>
+		</div>
+		<div style="background-color:#66cccc">
+			<p>panel 1</p>
+		</div>
+		<div style="background-color:#ffc000">
+			<p>panel 2</p>
+		</div>
+	</div><br>
+	<div id="log"></div>
+
+	<script>
+		//@TODO
+		// 1) 모든 종류의 커스텀 이벤트를 바인딩한다.
+		// 2) 로그출력
+		//    a) #log 요소에 이벤트가 발생하면 이벤트명을 출력하도록 한다.
+		//	  b) 플리킹이 시작될 때 마다 기존 로그는 삭제하도록 한다.
+		// 	  c) restore와 flickEnd인 경우 진하고 빨간색으로 텍스트를 출력한다.
+		new eg.Flicking("#wrapper", {
+			circular: true
+		}).on({
+			beforeFlickStart: handler,
+			flick: handler,
+			flickEnd: handler,
+			beforeRestore: handler,
+			restore: handler
+		});
+
+		var end;
+
+		function handler(event) {
+			var type = event.eventType;
+			var $log = $("#log");
+
+			end && $log.html("");
+			$log.html(
+					((end = /^(restore|flickEnd)$/.test(type)) ? "<span style='color:red;font-weight:bold'>"+ type +"</span>" : type)
+				+"<br>"+ $log.html());
+			;
+		}
+	</script>
+</body>
+</html>

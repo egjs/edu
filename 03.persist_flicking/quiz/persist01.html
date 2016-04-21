@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+<title>egjs - 실습</title>
+
+<script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+<script src="../js/egjs/dist/eg.persist.min.js"></script>
+<style>
+	li{height:300px}
+</style>
+<script>
+	// 테스트를 위해 강제로 스크롤 위치가 기억되지 않도록 처리
+	history.scrollRestoration = "manual";
+
+	//@TODO 다시 되돌아왔을때 이전 스크롤 위치로 복원되도록 하라.
+</script>
+</head>
+<body>
+	<ul>
+		<li><a href="http://m.naver.com">01. 네이버</a></li>
+		<li><a href="http://m.naver.com">02. 네이버</a></li>
+		<li><a href="http://m.naver.com">03. 네이버</a></li>
+		<li><a href="http://m.naver.com">04. 네이버</a></li>
+		<li><a href="http://m.naver.com">05. 네이버</a></li>
+	</ul>
+</body>
+</html>

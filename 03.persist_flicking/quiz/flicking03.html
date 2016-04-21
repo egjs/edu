@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+<title>egjs - 실습</title>
+
+<!-- user css start -->
+<style type="text/css">
+	h1{font-size:20px}
+	h2{font-size:17px}
+	.flick{height:100px;background-color:grey}
+	.eg-flick-container > div {height:100%;float:left;display:block}
+	.eg-flick-panel p {text-align:center;font-size:2.0em}
+	.eg-flick-panel p img {vertical-align:middle}
+
+	button{
+		border-radius: 30px;
+		padding: 0 10px;
+		margin: 3px;
+		height: 30px;
+		font-size: 12px;
+		font-weight: bold;
+		border: black 3px solid;
+		background-color:#eee;
+	}
+
+	input {width:40px}
+</style>
+
+<!-- user css end -->
+<script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.4/hammer.min.js"></script>
+<script src="../js/egjs/dist/eg.flicking.min.js"></script>
+</head>
+<body>
+
+	<h1>Using methods</h1>
+
+	<!-- 플리킹 요소 -->
+	<div id="wrapper" class="flick">
+		<div style="background-color:#CC66CC">
+			<p>panel 0</p>
+		</div>
+		<div style="background-color:#66cccc">
+			<p>panel 1</p>
+		</div>
+		<div style="background-color:#ffc000">
+			<p>panel 2</p>
+		</div>
+		<div style="background-color:maroon">
+			<p>Layer 3</p>
+		</div>
+		<div style="background-color:#ffc000">
+			<p>Layer 4</p>
+		</div>
+		<div style="background-color:red">
+			<p>Layer 5</p>
+		</div>
+	</div><br>
+
+	<hr>
+
+	<h2>이전/다음 패널로 이동</h2>
+	<p>
+		시간: <input type="text">
+		<button> 이전 </button>
+	</p>
+
+	<p>
+		시간: <input type="text">
+		<button> 다음 </button>
+	</p>
+
+	<hr>
+
+	<h2>특정 패널로 이동</h2>
+	<p>
+		패널: <input>
+		시간: <input>
+		<button> 이동 </button>
+	</p>
+
+	<script>
+		//@TODO
+		// 1) 이전, 다음 버튼이 동작하도록 한다.
+		//	a) 시간 입력필드 처리:
+		//	   	- 값이 없는 경우, 기본 값으로 동작하게 한다.
+		//		- 값이 입력되는 경우, 해당 값을 사용한다.
+		//
+		// 2) 특정 패널 이동 버튼이 동작하도록 한다.
+		//	   	- 값이 없는 경우, 기본 값으로 동작하게 한다.
+		//		- 값이 입력되는 경우, 해당 값을 사용한다.
+	</script>
+</body>
+</html>
