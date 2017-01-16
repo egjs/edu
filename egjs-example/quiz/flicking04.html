@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+<title>egjs - 실습</title>
+
+<!-- user css start -->
+<style type="text/css">
+	h1{font-size:20px}
+	.eg-flick-container > div {height:100%;float:left;display:block}
+
+	button{
+		border-radius: 20px;
+		margin: 3px;
+		height: 22px;
+		font-size: 10px;
+		border: 2px solid #B7B5B5;
+		background-color: #fff;
+		position: relative;
+		z-index: 2001;
+		top: -125px;
+		cursor: pointer;
+		font-weight:bold;
+	}
+
+	input {width:40px}
+
+	.flick{height:173px;background-color:grey}
+	.flick img {
+		width: 100%;
+		vertical-align: top;
+	}
+	.flick_pg { text-align:center; margin-top:-30px }
+	.flick_pg > span {
+		border-radius: 4px;
+		display:inline-block;
+		vertical-align: top;
+		font-size: 0;
+		width: 8px;
+		height: 8px;
+		margin: 0 3px;
+		background: #cdcdcd;
+	}
+
+	.flick_pg > span.on {
+		background-color: #2565d0;
+	}
+</style>
+
+<!-- user css end -->
+<script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.4/hammer.min.js"></script>
+<script src="../js/egjs/dist/eg.flicking.min.js"></script>
+</head>
+<body>
+
+	<h1>Flickable UI demo</h1>
+
+	<!-- 플리킹 요소 -->
+	<div id="wrapper" class="flick">
+		<div><img src="../pic/01.jpg"</div>
+	</div><br>
+
+	<!-- 이전/다음 버튼 -->
+	<button>&lt;</button><button style="float:right">&gt;</button>
+
+	<!-- 페이징 영역 -->
+	<div class="flick_pg" id="flickPg">
+		<span>1</span>
+		<span class="on">2</span>
+	</div>
+
+	<script>
+		//@TODO
+		// 1) 3개의 물리적 패널만을 사용해 10개의 패널을 처리한다.
+		//	  패널 이미지는 pic/*.jpg를 사용한다.
+		// 2) 이전/다음 버튼 클릭시 패널 이동
+		// 3) 하단 페이지 위치 UI 처리
+		// 4) 디바이스 회전에 대한 대응 추가
+		//    http://egjs.github.io/latest/doc/jQuery.html#event:rotate
+	</script>
+</body>
+</html>
