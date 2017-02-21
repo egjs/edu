@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>네이버의 모던 웹 라이브러리 - egjs</title>
+
+		<meta name="description" content="A presentation of egjs library">
+		<meta name="author" content="JaeSung Park">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/css/reveal.min.css">
+		<link rel="stylesheet" href="./css/reveal/theme/night.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/lib/css/zenburn.min.css">
+
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/css/print/pdf.min.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/lib/js/html5shiv.min.js"></script>
+		<![endif]-->
+        <link rel="stylesheet" href="./css/main.css">
+	</head>
+
+	<body>
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+                <section>
+                    <div class="title-page">
+                        <div><img src="img/egjs.png" style="float:left"></div>
+                        <div>
+                            <h2>네이버의 모던 웹<br>라이브러리 • egjs</h2>
+
+                            <small>
+                                <span>2017</span><br>
+                                <img src="./img/naver-log.svg">
+                            </small>
+                        </div>
+                    </div>
+                </section>
+
+                <section data-markdown="content.md"
+                         data-separator="^\r?\n----------\r?\n$"
+                         data-vertical="^=0=0=0\r?\n$"
+                         data-separator-notes="^Note:"
+                         data-charset="utf-8"
+                         data-background="#2d2d2d"
+                         data-background-transition="slide">
+                </section>
+
+                <section>
+                    <main>
+                        <h1 style="font-size:5em">고맙습니다.</h1>
+                        <p>
+                            <a href="https://github.com/naver/egjs/" target="_new">https://github.com/naver/egjs/</a>
+                        </p>
+                    </main>
+
+
+                </section>
+			</div>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/lib/js/head.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/js/reveal.min.js"></script>
+
+		<script>
+            // Full list of configuration options available at:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                slideNumber: true,
+                history: true,
+                center: true,
+                transition: 'convex', // none/fade/slide/convex/concave/zoom
+                fragments: true,
+
+                // Optional reveal.js plugins
+                dependencies: [
+                    { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/lib/js/classList.min.js', condition: function() { return !document.body.classList; } },
+                    { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/plugin/markdown/marked.min.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/plugin/markdown/markdown.min.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); },
+                        callback: function() {
+                            Array.prototype.forEach.call(document.querySelectorAll('section > p'), function(ele) {
+                                var fragIndex = ele.innerHTML.indexOf("==")
+                                if (fragIndex != -1){
+                                    ele.innerHTML = ele.innerHTML.replace("==", "");
+                                    ele.className = 'fragment';
+                                }
+                            });
+                        }
+                    },
+                    { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/plugin/highlight/highlight.min.js', async: true, condition: function() { return true;/* !!document.querySelector( 'pre code' );*/ },
+                        callback: function() {
+                            hljs.initHighlightingOnLoad();
+                        }
+                    },
+                    { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/plugin/zoom-js/zoom.min.js', async: true },
+                    { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/plugin/notes/notes.min.js', async: true }
+                ]
+            });
+
+            Reveal.addEventListener('slidechanged', function(e) {
+                animate("title-animate", e);
+            });
+
+            Reveal.addEventListener('fragmentshown', function(e) {
+                // event.fragment = the fragment DOM element
+                event.fragment.classList.add("fragment-text");
+            });
+            Reveal.addEventListener('fragmenthidden', function(e) {
+                // event.fragment = the fragment DOM element
+                event.fragment.classList.remove("fragment-text");
+            });
+    </script>
+	</body>
+</html>
