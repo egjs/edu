@@ -1,0 +1,393 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>infiniteGrid Practice 4</title>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="../assert/css/site.min.css">
+<style>
+.item {
+	width:50%;
+	min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+@media (min-width: 768px) {
+	.item {
+		width : 33.33333333%;
+	}
+}
+@media (min-width: 992px) {
+	.item {
+		width : 25%;
+	}
+}
+@media (min-width: 1200px) {
+	.item {
+		width : 16.66666667%;
+	}
+}
+/* 카드 배치 확인용. 절대 서비스에서는 사용하지 마세요 - start */
+.item {
+	transform : translateZ(0);
+}
+/* 카드 배치 확인용. 절대 서비스에서는 사용하지 마세요 - end */
+</style>
+</head>
+<body style="background-color: #f1f2f6;">
+<div class="container">
+  <!-- navbar -->
+  <div class="row">
+    <div class="col-md-12">
+      <nav class="navbar navbar-inverse" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Infinite Grid Practice 4</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <!-- infinite grid -->
+  <div id="grid" class="row">
+  	  <div class="item" data-offset="1">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/1.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="2">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/2.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="3">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/3.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="4">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/4.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="5">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/5.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="6">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/6.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="7">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/7.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="8">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/8.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="9">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/9.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="10">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/10.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="11">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/11.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="12">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/12.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="13">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/13.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="14">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/14.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="15">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/15.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="16">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/16.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="17">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/17.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="18">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/18.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="19">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/19.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="20">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/20.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="21">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/21.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="22">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/22.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="23">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/23.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="24">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/24.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="25">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/25.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="26">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/26.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="27">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/27.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="28">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/28.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="29">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/29.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="30">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/30.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+  </div>
+</div>
+<script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/egjs/1.4.1/pkgd/infiniteGrid.pkgd.min.js"></script>
+<script id="items-template" type="text/x-template">
+  <div class="item" data-offset="<%=offset%>">
+    <div class="thumbnail">
+      <img class="img-rounded" src="<%=imgSrc%>" />
+      <div class="caption">
+        <p><a href="<%=href%>"><%=desc%></a></p>
+      </div>
+    </div>
+  </div>
+</script>
+<!--
+    데이터를 얻는 함수
+    data.getItems(); 60개의 데이터를 jQuery 타입으로 반환한다.
+-->
+<script src="../assert/js/data.js"></script>
+<script>
+var Service = eg.Class({
+  construct: function() {
+    this.$grid = $("#grid");
+    this.inst = null;
+
+    // infiniteGrid 생성
+    this.createInfiniteGrid();
+  },
+  createInfiniteGrid : function() {
+  	/**
+  	 * @todo createInfiniteGrid에서
+  	 * 1) DOM 개수를 60개로 유지한다. count를 60으로 지정
+  	 * 2) 최초 마크업에 있는 카드의 그룹키를 1로 등록한다. (defaultGroupKey)
+  	 */
+  	/* jquery plugin 방식 */
+    this.$grid.infiniteGrid({
+    	count : -1
+    });
+    this.inst = this.$grid.infiniteGrid("instance");
+
+    var $grid = this.$grid;
+    this.$grid.on({
+    	"infiniteGrid:append": function(e) {
+    		/**
+		     * @todo 현재 카드의 그룹키 내역을 gk 변수에 등록한다.
+		     */
+				var gk;
+				var lastGk = gk[gk.length-1];
+				// 현재 카드의 마지막 그룹키보다 1이 큰 그룹키를 등록한다.
+				lastGk++;
+				this.append(data.getItems(lastGk), lastGk);
+			},
+			"infiniteGrid:prepend": function(e) {
+				/**
+		  	 * @todo infiniteGrid의 infiniteGrid:prepend 이벤트를 바인딩한다.
+		  	 * data.getItems()를 이용하여 얻은 데이터를 prepand한다. 그룹키는 최상단 카드 그룹키의 전 데이터 (groupKeys[0] -1)를 넣는다. 또한, 최상단 카드의 그룹키가 0인 경우, prepend하지 않는다.
+		  	 */
+			},
+			"infiniteGrid:layoutComplete": function(e) {
+				// append나 prepend된 이후에도 DOM의 개수가 변함이 없다.
+				var groupKeys = this.getGroupKeys();
+				console.info(e.eventType, "(DOM 개수 :", $grid.find(".item").length,  "), groupKey [", groupKeys[0], "~", groupKeys[groupKeys.length-1],"]");
+			}
+		});
+  }
+});
+
+new Service();
+</script>
+</body>
+</html>

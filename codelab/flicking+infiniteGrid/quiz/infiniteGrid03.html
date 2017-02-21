@@ -1,0 +1,634 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>infiniteGrid Practice 3</title>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="../assert/css/site.min.css">
+<style>
+.item {
+	width:50%;
+	min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+@media (min-width: 768px) {
+	.item {
+		width : 33.33333333%;
+	}
+}
+@media (min-width: 992px) {
+	.item {
+		width : 25%;
+	}
+}
+@media (min-width: 1200px) {
+	.item {
+		width : 16.66666667%;
+	}
+}
+</style>
+</head>
+<body style="background-color: #f1f2f6;">
+<div class="container">
+  <!-- navbar -->
+  <div class="row">
+    <div class="col-md-12">
+      <nav class="navbar navbar-inverse" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Infinite Grid Practice 3</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <!-- infinite grid -->
+  <div id="grid" class="row">
+	  <div class="item" data-offset="1">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/1.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="2">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/2.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="3">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/3.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="4">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/4.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="5">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/5.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="6">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/6.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="7">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/7.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="8">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/8.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="9">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/9.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="10">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/10.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="11">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/11.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="12">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/12.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="13">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/13.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="14">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/14.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="15">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/15.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="16">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/16.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="17">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/17.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="18">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/18.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="19">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/19.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="20">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/20.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="21">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/21.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="22">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/22.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="23">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/23.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="24">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/24.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="25">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/25.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="26">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/26.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="27">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/27.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="28">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/28.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="29">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/29.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="30">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/30.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="31">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/31.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="32">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/32.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="33">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/33.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="34">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/34.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="35">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/35.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="36">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/36.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="37">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/37.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="38">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/38.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="39">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/39.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="40">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/40.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="41">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/41.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="42">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/42.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="43">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/43.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="44">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/44.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="45">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/45.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="46">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/46.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="47">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/47.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="48">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/48.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="49">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/49.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="50">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/50.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="51">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/51.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="52">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/52.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="53">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/53.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="54">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/54.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="55">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/55.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="56">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/56.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="57">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/57.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="58">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/58.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="59">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/59.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="item" data-offset="60">
+	    <div class="thumbnail">
+	      <img class="img-rounded" src="../assert/img/60.jpg" />
+	      <div class="caption">
+	        <p><a href="http://naver.com/">Cras justo odio...</a></p>
+	      </div>
+	    </div>
+	  </div>
+  </div>
+</div>
+<script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/egjs/1.4.1/pkgd/infiniteGrid.pkgd.min.js"></script>
+<script id="items-template" type="text/x-template">
+  <div class="item" data-offset="<%=offset%>">
+    <div class="thumbnail">
+      <img class="img-rounded" src="<%=imgSrc%>" />
+      <div class="caption">
+        <p><a href="<%=href%>"><%=desc%></a></p>
+      </div>
+    </div>
+  </div>
+</script>
+<!--
+    데이터를 얻는 함수
+    data.getItems(); 60개의 데이터를 jQuery 타입으로 반환한다.
+-->
+<script src="../assert/js/data.js"></script>
+<script>
+var Service = eg.Class({
+  construct: function() {
+    this.$grid = $("#grid");
+    this.inst = null;
+
+    // infiniteGrid 생성
+    this.createInfiniteGrid();
+  },
+  createInfiniteGrid : function() {
+  	/**
+  	 * @todo createInfiniteGrid에서
+  	 * 1) InfiniteGrid를 jQuery plugin 방식으로 변경
+		 * 2) this.inst에 infiniteGrid instance를 저장하세요.
+		 * 3) 계속 증가시키기 위해서 count를 -1로 지정
+		 * 4) infiniteGrid:append 이벤트 핸들러를 작성한다.
+		 *   -  data.getItems()를 이용하여 얻은 데이터를 append한다.
+		 * 5) infiniteGrid의 다른 메소드의 값을 확인해 본다.
+     *   - Append 시 isProcessing 함수값을 확인한다.
+     *   - getBottomElement 함수로 마지막 카드의 HTMLElement를 구해본다.
+  	 */
+  }
+});
+
+new Service();
+</script>
+</body>
+</html>
