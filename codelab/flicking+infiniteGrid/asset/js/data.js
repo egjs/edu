@@ -5,7 +5,7 @@ var data = {
 			.map(function(n) {
 				return {
 					offset: offset + n,
-					imgSrc: "../assert/img/" + (n + 1) + ".jpg",
+					imgSrc: "../asset/img/" + (n + 1) + ".jpg",
 					href: "http://naver.com/",
 					desc: "Cras justo odio..."
 				};
