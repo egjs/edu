@@ -632,11 +632,12 @@ var Service = eg.Class({
     this.inst = this.$grid.infiniteGrid("instance")
     	.on("infiniteGrid:append", function(e) {
     		this.append(data.getItems());
+			console.log("append")
     	});
   }
 });
 
-new Service();
+var ig = new Service();
 </script>
 </body>
 </html>

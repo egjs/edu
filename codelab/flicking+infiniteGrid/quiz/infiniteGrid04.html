@@ -363,20 +363,23 @@ var Service = eg.Class({
     var $grid = this.$grid;
     this.$grid.on({
     	"infiniteGrid:append": function(e) {
-    		/**
-		     * @todo 현재 카드의 그룹키 내역을 gk 변수에 등록한다.
-		     */
+				/**
+				 * @todo 현재 카드의 그룹키 내역을 gk 변수에 등록한다.
+				 */
 				var gk;
 				var lastGk = gk[gk.length-1];
+
 				// 현재 카드의 마지막 그룹키보다 1이 큰 그룹키를 등록한다.
 				lastGk++;
 				this.append(data.getItems(lastGk), lastGk);
 			},
 			"infiniteGrid:prepend": function(e) {
 				/**
-		  	 * @todo infiniteGrid의 infiniteGrid:prepend 이벤트를 바인딩한다.
-		  	 * data.getItems()를 이용하여 얻은 데이터를 prepand한다. 그룹키는 최상단 카드 그룹키의 전 데이터 (groupKeys[0] -1)를 넣는다. 또한, 최상단 카드의 그룹키가 0인 경우, prepend하지 않는다.
-		  	 */
+				 * @todo infiniteGrid의 infiniteGrid:prepend 이벤트를 바인딩한다.
+				 * data.getItems()를 이용하여 얻은 데이터를 prepend한다.
+				 * 그룹키는 최상단 카드 그룹키의 전 데이터 (groupKeys[0] -1)를 넣는다.
+				 * 또한, 최상단 카드의 그룹키가 0인 경우, prepend하지 않는다.
+				 */
 			},
 			"infiniteGrid:layoutComplete": function(e) {
 				// append나 prepend된 이후에도 DOM의 개수가 변함이 없다.
@@ -387,7 +390,7 @@ var Service = eg.Class({
   }
 });
 
-new Service();
+var ig = new Service();
 </script>
 </body>
 </html>
