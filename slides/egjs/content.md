@@ -580,6 +580,8 @@ https://www.youtube.com/watch?v=jTRe1tvFYdE <!-- .element: style="font-size:12px
   - VanillaJS로 전환, 의존성 줄여 사용환경 개선 <br>( [참고] [Is jQuery Still Relevant?](http://developer.telerik.com/featured/is-jquery-still-relevant/) )
 - 모듈별 개별 라이브러리로 분리 <!-- .element: class="fragment size40" -->
   - light 하게, 기능 중심적 및 사용성 증대
+- 360 이미지 뷰어 <!-- .element: class="fragment size40" -->
+  - http://naver.me/xJUCtdb3
 
 ----------
 
